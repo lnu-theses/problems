@@ -1,20 +1,22 @@
 # Problem 2
-Implement Python code for encryption and decryption using transposition cipher with key length L=(P mod 8) + 8 (P here stands for the student number from problem 1).
+Implement Python code for encryption and decryption using transposition cipher with key length `L=(P mod 8) + 8` (`P` here stands for the student number from problem 1).
 
 ## Description of transposition cipher
-1. Let N = count of characters in a message.
-2. Start writing the message in rows with length L.
+1. Let `N` = count of characters in a message.
+2. Start writing the message in rows with length `L`.
 3. Now record the encrypted message by going down each column. 
 
-So a simple example for msg="DES2024RULES" and key length L=4:
-D | E | S | 2
-0 | 2 | 4 | R
-U | L | E | S
+So a simple example for msg="DES2024RULES" and key length `L=4`:
+
+| D | E | S | 2 |
+| --- | --- | --- | --- |
+| 0 | 2 | 4 | R |
+| U | L | E | S |
 
 Here the encrypted message will be "D0UE2LS4E2RS"
 
 # Problem 3
-Write your own simple symmetric encryption algorithm. A requirement for this algorithm is that length of keys must be equal to L=(P mod 8) + 8 (like in Problem 2).
+Write your own simple symmetric encryption algorithm. A requirement for this algorithm is that length of keys must be equal to `L=(P mod 8) + 8` (like in Problem 2).
 
 So you need to write the following 2 functions:
 ```Python
