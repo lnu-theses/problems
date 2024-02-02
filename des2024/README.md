@@ -37,3 +37,34 @@ Add an additional encryption mode named `custom` that will use your own encrypti
 2. In one shell, run `python clientA.py <mode>`, where `mode` is one of `plain`, `sym`, `custom`.
 3. In another shell, run `python clientB.py <mode>`.
 4. Messages typed in `clientB` should appear in `clientA`.
+
+# Problem 5
+Perform frequency analysis of the text.
+
+Take a chapter with number `N=P mod 10` from this book https://github.com/ethereumbook/ethereumbook.
+
+Store it into a file and read it with Python.
+
+Do the following:
+
+1. Write a simple hyphenation algorithm. Hyphenation algorithm splits a word into syllables. 
+For simplicity, consider a syllable to be a block of text that contains at least a single vowel, and possibly consonants.
+If vowels are consecutive, consider them to be part of one syllable.
+
+So, for instance,
+```
+>>> hyphenate("celestial")
+['ce', 'les', 'tial']
+```
+Alternatively ,
+```
+>>> hyphenate("celestial")
+['cel', 'est', 'ial']
+```
+is also fine. Just make sure that consonants are not "lost", meaning are not part of any syllable.
+
+2. Using your algorithm, find the following:
+  - 5 most frequently occurring syllables
+  - 5 most frequent syllables at the beginning of the word
+  - 5 most frequent syllables at the end of the word
+  - average length of a syllable and average count of syllables per word
